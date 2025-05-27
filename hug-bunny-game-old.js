@@ -11,11 +11,7 @@ const questions = [
 ];
 const bunnyNames = [
   "jerin", "tinto", "jesto", "jefin", "jugal", "rajeev", "tom", "alet",
-  "raijo", "melvin", "vimal", "ebin", "aby", "ginto", "Muffin", "Oreo", "Bubbles",
-  "Pudding", "Cotton", "Choco", "Poppy", "Caramel", "Sprout", "Daisy", "Toffee", "Fudge",
-  "Twinkle", "Skippy", "Hopster", "Whiskers", "Dumpling", "Snickers", "Berry", "Peanut",
-  "Pip", "Echo", "Dandelion", "Waffles", "Maple", "Gingersnap", "Tinker", "Zigzag",
-  "Clover", "Cupcake", "Poppyseed"
+  "raijo", "melvin", "vimal", "ebin", "aby", "ginto"
 ];
 let questionIndex = 0;
 
@@ -80,8 +76,8 @@ function init() {
     map: {
       el: document.querySelector('.map'),
       walls: [],
-      w: 5 * 200,
-      h: 5 * 200,
+      w: 10 * 200,
+      h: 10 * 200,
       x: 0, y: 0,
     },
     transitionTimer: null,
@@ -214,15 +210,13 @@ bunny.el.appendChild(nameTag);
     questionIndex++;
     if (questionIndex === 15) {
       const content = questionAnswers.map((qa, i) =>
-  `Q${i + 1}: ${qa.question}
-A${i + 1}: ${qa.answer}
-`
-).join('');
-const blob = new Blob([content], { type: 'text/plain' });
-const a = document.createElement('a');
-a.href = URL.createObjectURL(blob);
-a.download = `${playerName}_answers.txt`;
-a.click();
+        `Q${i + 1}: ${qa.question}\nA${i + 1}: ${qa.answer}\n`
+      ).join('\n');
+      const blob = new Blob([content], { type: 'text/plain' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = `${playerName}_answers.txt`;
+      a.click();
     }
   }
     const classToAdd = bunny.x > player.x ? 'hug-bear-bunny' : 'hug-bunny-bear'
@@ -437,7 +431,7 @@ a.click();
   elements.button.addEventListener('click', ()=> location.reload())
 
   new Array(14).fill('').forEach(()=> addBunny())
-  new Array(10).fill('').forEach(()=> addTree())
+  new Array(100).fill('').forEach(()=> addTree())
   updateSadBunnyCount()
 }
 

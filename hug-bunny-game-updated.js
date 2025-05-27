@@ -80,8 +80,8 @@ function init() {
     map: {
       el: document.querySelector('.map'),
       walls: [],
-      w: 5 * 200,
-      h: 5 * 200,
+      w: 20 * 200,
+      h: 20 * 200,
       x: 0, y: 0,
     },
     transitionTimer: null,
@@ -367,7 +367,7 @@ a.click();
   player.y = getRandomPos('h')
   player.el.style.zIndex = player.y
   setSize(settings.map)
- // for (let i = 0; i < 15; i++) addBunny();
+  for (let i = 0; i < 15; i++) addBunny();
 
   document.addEventListener('click', e => {
     stopSprite(player)
@@ -436,8 +436,8 @@ a.click();
   
   elements.button.addEventListener('click', ()=> location.reload())
 
-  new Array(14).fill('').forEach(()=> addBunny())
-  new Array(10).fill('').forEach(()=> addTree())
+  new Array(5).fill('').forEach(()=> addBunny())
+  new Array(100).fill('').forEach(()=> addTree())
   updateSadBunnyCount()
 }
 
