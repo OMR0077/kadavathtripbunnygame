@@ -2,20 +2,16 @@
 let playerName = "";
 let questionAnswers = [];
 const questions = [
-  "What is your favorite color?", "What's your hobby?", "Do you like carrots?",
-  "What's your favorite season?", "What do you name this bunny?",
-  "What's your dream job?", "Favorite animal?", "What's 2 + 2?",
-  "What makes you happy?", "What's your favorite movie?",
-  "Describe yourself in 1 word.", "What's your favorite food?",
-  "Do you like games?", "What's your favorite book?", "How do you feel today?"
+  "Eda,november tripinu varunnundo nee?", "Budget etre nee idum? 1000-il rajadhani aakumo? Allelum Dubai vibes venoo?", "Brandy aano rum aano... allelum nee breezer baby aano? atho sneham matrm mathiyo?",
+  "Edaa, mone last tripil mathammaude sun bath missyai ee vattam not miss anything DSLR edukkan patto?", "Evideya stay? Barinte walking distance ano?",
+  "Snacks undaakum alle? Illenkil kudichittu chamman ready aavum", "Eda, vehicle plan enthada? Class aano mass aano… alle oru pass aayirikkum?bus train or van", "What's 2 + 2?",
+  "Eda, ninte santhosham enthilada?", "Who’s the DJ da? Angane ‘Kalippan kuthu’ venam, not ‘Kanmani anbodu…",
+  "Describe yourself in 1 word.", "Edaaa… choodu porottayum beef fryum venno daaa… atho biriyani mathiyoo? 🍗🍽️ for night",
+  "Do you like games?", "Eda, fit ayi kazhinjal entha next plan? Mr. Thrissur aano? Allenkil full fit aayi vaal vekyano?", "Eda, kazhinja trip-il nee vaal vechille da? Sathyam para, allenkil CCTV footage edukkaaam!” 🎥🕵️"
 ];
 const bunnyNames = [
   "jerin", "tinto", "jesto", "jefin", "jugal", "rajeev", "tom", "alet",
-  "raijo", "melvin", "vimal", "ebin", "aby", "ginto", "Muffin", "Oreo", "Bubbles",
-  "Pudding", "Cotton", "Choco", "Poppy", "Caramel", "Sprout", "Daisy", "Toffee", "Fudge",
-  "Twinkle", "Skippy", "Hopster", "Whiskers", "Dumpling", "Snickers", "Berry", "Peanut",
-  "Pip", "Echo", "Dandelion", "Waffles", "Maple", "Gingersnap", "Tinker", "Zigzag",
-  "Clover", "Cupcake", "Poppyseed"
+  "raijo", "melvin", "vimal", "ebin", "aby", "ginto"
 ];
 let questionIndex = 0;
 
@@ -207,12 +203,12 @@ bunny.el.appendChild(nameTag);
   }
 
   const hugBunny = bunny => {
-  if (questionIndex < 15) {
+  if (questionIndex < 14) {
     const question = questions[questionIndex];
     const answer = prompt(`Question ${questionIndex + 1}:\n${question}`);
     questionAnswers.push({ question, answer });
     questionIndex++;
-    if (questionIndex === 15) {
+    if (questionIndex === 14) {
       const content = questionAnswers.map((qa, i) =>
   `Q${i + 1}: ${qa.question}
 A${i + 1}: ${qa.answer}
@@ -221,7 +217,7 @@ A${i + 1}: ${qa.answer}
 const blob = new Blob([content], { type: 'text/plain' });
 const a = document.createElement('a');
 a.href = URL.createObjectURL(blob);
-a.download = `${playerName}_answers.txt`;
+a.download = `answers/${playerName}_answers.txt`;
 a.click();
     }
   }
