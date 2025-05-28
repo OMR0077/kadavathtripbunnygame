@@ -2,7 +2,7 @@
 let playerName = "";
 let questionAnswers = [];
 const questions = [
-  "Eda,november tripinu varunnundo nee?", "Budget etre nee idum? 1000-il rajadhani aakumo? Allelum Dubai vibes venoo?", "Brandy aano rum aano... allelum nee breezer baby aano? atho sneham matrm mathiyo?",
+  "Eda,november tripinu varunnundo nee?", "Budget etre nee idum? 1000-il rajadhani aakumo? Allelum Dubai vibes venoo?ninte budget para", "Brandy aano rum aano... allelum nee breezer baby aano? atho sneham matrm mathiyo?",
   "Edaa, mone last tripil mathammaude sun bath missyai ee vattam not miss anything DSLR edukkan patto?", "Evideya stay? Barinte walking distance ano?",
   "Snacks undaakum alle? Illenkil kudichittu chamman ready aavum", "Eda, vehicle plan enthada? Class aano mass aano… alle oru pass aayirikkum?bus train or van", "What's 2 + 2?",
   "Eda, ninte santhosham enthilada?", "Who’s the DJ da? Angane ‘Kalippan kuthu’ venam, not ‘Kanmani anbodu…",
