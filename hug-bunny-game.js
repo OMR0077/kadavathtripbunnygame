@@ -186,7 +186,7 @@ bunny.el.appendChild(nameTag);
   }
 
   const triggerBunnyMessage = (bunny, classToAdd) => {
-    bunny.el.setAttribute('message', ['thanks!', 'arigato!', 'yeah!', '^ _ ^', 'thank you!'][randomN(5) - 1])
+    bunny.el.setAttribute('message', ['Thanks machaa!', 'Nannayii da!', 'Kalippu !', 'Enikkishtapetta', 'thank you!', 'Oru periya hugum', 'machaa'][randomN(7) - 1])
     bunny.el.classList.add(classToAdd)
     setTimeout(()=>{
       bunny.el.classList.remove(classToAdd)
